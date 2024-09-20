@@ -1,5 +1,6 @@
-# stapedotomy_prediction_code
-Prediction of hearing recovery after stapedotomy
+# Stapedotomy prediction 
+
+Prediction of hearing recovery after stapedotomy by estimating a postoperative audiogram. 
 
 ## Environment setup 
 
