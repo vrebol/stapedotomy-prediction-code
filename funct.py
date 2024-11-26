@@ -177,6 +177,21 @@ def correlation_select(x_train):
 
     return selected_features_names
 
+def plot_predicted_vs_target(predicted, target, model:str, target_str:str):
+    plt.figure(figsize=(10,10))
+    plt.scatter(target, predicted, c='crimson')
+
+    p1 = max(max(predicted), max(target))
+    p2 = min(min(predicted), min(target))
+    plt.plot([p1, p2], [p1, p2], 'b-')
+    plt.xlabel('True Values', fontsize=15)
+    plt.ylabel('Predictions', fontsize=15)
+    plt.axis('equal')
+    plt.grid()
+    plt.title(f'Predicted vs True Values for {model}, target frequency: {target_str}')
+    plt.savefig(f'figures/pr_tr_{model}_{target_str}.png')
+    pass
+
 def main():
 
     return 
